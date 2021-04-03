@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  calculator:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      FunctionName: calculator
+      Description: ''
+      Handler: index.handler
+      MemorySize: 128
+      Role: 'arn:aws:iam::913830756646:role/service-role/calculator-role-45dcbf6w'
+      Runtime: nodejs12.x
+      Timeout: 60
+      Environment:
+        Variables:
+          REGION: us-east-2
+          CALCULATE_TABLE: calculate_table

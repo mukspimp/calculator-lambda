@@ -1,0 +1,23 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "calculator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mukspimp/calculator-lambda.git"
+  },
+  "author": "mukund pimpale",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mukspimp/calculator-lambda/issues"
+  },
+  "homepage": "https://github.com/mukspimp/calculator-lambda#readme",
+  "dependencies": {
+    "aws-sdk": "^2.878.0",
+    "uuid": "^8.3.2"
+  }
+}

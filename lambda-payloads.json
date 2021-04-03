@@ -1,0 +1,12 @@
+{
+    "calculator": {
+        "lambda": {
+            "arguments": {
+                "value1": "55",
+                "value2": "15",
+                "operation": "divide",
+                "getAll": false
+            }
+        }
+    }
+}
