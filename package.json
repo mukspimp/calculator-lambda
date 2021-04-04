@@ -8,15 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mukspimp/calculator-lambda.git"
+    "url": "git+https://github.com/mukspimp/aws-lambda.git"
   },
   "author": "mukund pimpale",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mukspimp/calculator-lambda/issues"
+    "url": "https://github.com/mukspimp/aws-lambda/issues"
   },
-  "homepage": "https://github.com/mukspimp/calculator-lambda#readme",
+  "homepage": "https://github.com/mukspimp/aws-lambda#readme",
   "dependencies": {
+    "ajv": "^8.0.5",
     "aws-sdk": "^2.878.0",
     "uuid": "^8.3.2"
   }

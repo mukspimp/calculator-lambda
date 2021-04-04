@@ -1,5 +1,7 @@
 const dbService = require('../services/dbservice.js')
 const { v4: uuidv4 } = require("uuid")
+const { validate } = require("../services/validator.js")
+const { schema: calculatorSchema } = require("../schema/calculatorSchema.js")
 
 // add value1 and value2
 const add = (input) => {
@@ -68,7 +70,11 @@ const calculate = async (input) => {
         let response = { CalculatorResponse: [] }
         
         if (input.info.parentTypeName === 'Mutation'
-            && input.info. fieldName === 'saveCalculations') {
+            && input.info.fieldName === 'saveCalculations') {
+                const validationResult = validate(params, calculatorSchema)
+                if (!validationResult.valid) {
+                    throw new Error({ err: validationResult.err })
+                }
                 const result = operations(params)
                 const calId = uuidv4()
                 const insertResult = await dbService.insert(table, {
